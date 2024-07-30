@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Build directories
+build/
+dist/
+
+# Local environment files
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Strapi specific
+.tmp/
+.uploads/
