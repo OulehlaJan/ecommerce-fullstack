@@ -9,7 +9,7 @@ const clientBuildPath = path.join(__dirname, "../client/build");
 app.use(express.static(clientBuildPath));
 
 // Serve static files from the Strapi public folder
-const publicPath = path.join(__dirname, "../public");
+const publicPath = path.join(__dirname, "../server/public");
 app.use(express.static(publicPath));
 
 // Log the paths to ensure they're correct
