@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { searchItems } from "../../api/search";
 import {
   Box,
@@ -15,7 +15,7 @@ import {
 import { Close as CloseIcon } from "@mui/icons-material";
 
 const SearchBar = ({ searchOpen, handleToggleSearch }) => {
-  const navigate = useNavigate();
+  const history = useHistory();
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -50,7 +50,7 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
 
   // Function to handle item click and navigate to the item page
   const handleItemClick = (itemId) => {
-    navigate(`/item/${itemId}`);
+    history.push(`/item/${itemId}`);
     handleToggleSearch();
   };
 

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && npm run build && cd .. && cd server && npm install --legacy-peer-deps",
-    "start": "node server/index.js"
+    "heroku-postbuild": "cd client && npm install && npm run build && cd .. && cd server && npm install",
+    "start": "node server/src/app.js"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -33,7 +33,7 @@
     "react-lazyload": "^3.2.1",
     "react-redux": "^9.1.2",
     "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^6.24.0",
+    "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "stripe": "^16.5.0",
     "styled-components": "5.3.3",

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { shades } from "../theme";
@@ -23,7 +23,7 @@ import {
 import LazyLoad from "react-lazyload";
 
 const Item = ({ item, width, useLazyLoad = true }) => {
-  const navigate = useNavigate();
+  const history = useHistory();
   const dispatch = useDispatch();
   const [count, setCount] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
@@ -116,7 +116,7 @@ const Item = ({ item, width, useLazyLoad = true }) => {
           width="300px"
           height="400px"
           src={`http://localhost:1337${url}`}
-          onClick={() => navigate(`/item/${item.id}`)}
+          onClick={() => history.push(`/item/${item.id}`)}
           onLoad={handleImageLoad}
           style={{ display: loading ? "none" : "block", cursor: "pointer" }}
         />

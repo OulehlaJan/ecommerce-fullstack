@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Box, Button, Divider, IconButton, Typography } from "@mui/material";
 import { shades } from "../../theme";
@@ -23,7 +23,7 @@ const FlexBox = styled(Box)`
 `;
 
 const CartMenu = () => {
-  const navigate = useNavigate();
+  const history = useHistory();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
@@ -35,7 +35,7 @@ const CartMenu = () => {
 
   const handleCheckout = () => {
     if (cart.length > 0) {
-      navigate("/checkout");
+      history.push("/checkout");
       dispatch(setIsCartOpen({}));
     } else {
       setCartEmptyMessage("Cart is Empty!<br />Please Add Product First");

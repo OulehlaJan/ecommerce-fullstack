@@ -1,8 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const NotFound = () => {
-  const navigate = useNavigate();
+  const history = useHistory();
 
   return (
     <Box
@@ -23,7 +23,7 @@ const NotFound = () => {
         The page you're looking for doesn't exist.
       </Typography>
       <Button
-        onClick={() => navigate("/")}
+        onClick={() => history.push("/")}
         variant="contained"
         color="primary"
         sx={{

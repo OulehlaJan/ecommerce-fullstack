@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { setIsCartOpen } from "../../redux/cartSlice";
 import { selectTotalItemsCount } from "../../redux/cartSlice";
 import { shades } from "../../theme";
@@ -28,7 +28,7 @@ import {
 import SearchBar from "./SearchBar";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  const history = useHistory();
   const location = useLocation();
   const dispatch = useDispatch();
   const totalItemsCount = useSelector(selectTotalItemsCount);
@@ -88,7 +88,7 @@ const Navbar = () => {
   const handleChange = (event, newValue) => {
     const selectedCategory = categories[newValue];
     setValue(newValue);
-    navigate(`/category/${selectedCategory}`);
+    history.push(`/category/${selectedCategory}`);
   };
 
   // Handle for hamburger menu
@@ -128,7 +128,7 @@ const Navbar = () => {
       >
         {/* LOGO */}
         <Box
-          onClick={() => navigate("/")}
+          onClick={() => history.push("/")}
           color={shades.secondary[500]}
           fontSize="18px"
           sx={{ "&:hover": { cursor: "pointer" } }}
@@ -150,7 +150,7 @@ const Navbar = () => {
                 <Tab
                   key={index}
                   label={category}
-                  onClick={() => navigate(`/category/${category}`)}
+                  onClick={() => history.push(`/category/${category}`)}
                 />
               ))}
             </Tabs>
@@ -209,7 +209,7 @@ const Navbar = () => {
             {categories.map((category, index) => (
               <ListItem key={index}>
                 <ListItemButton
-                  onClick={() => navigate(`/category/${category}`)}
+                  onClick={() => history.push(`/category/${category}`)}
                 >
                   <ListItemText primary={category} />
                 </ListItemButton>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { addToCart } from "../../redux/cartSlice";
 import { shades } from "../../theme";
 import { fetchItems, fetchItem } from "../../api/items";
@@ -22,8 +22,8 @@ import {
 import Item from "../../components/Item";
 
 const ItemDetails = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { itemId } = useParams();
   const [value, setValue] = useState("description");
   const [count, setCount] = useState(1);
@@ -154,7 +154,7 @@ const ItemDetails = () => {
                   fontWeight: "bold",
                 },
               }}
-              onClick={() => navigate("/")}
+              onClick={() => history.push("/")}
             >
               Home
             </Box>
@@ -167,7 +167,7 @@ const ItemDetails = () => {
                   fontWeight: "bold",
                 },
               }}
-              onClick={() => navigate(`/category/${category}`)}
+              onClick={() => history.push(`/category/${category}`)}
             >
               {category}
             </Box>

@@ -1,4 +1,9 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useLocation,
+} from "react-router-dom";
 import { useEffect } from "react";
 import { Box } from "@mui/material";
 import Home from "./scenes/home/Home";
@@ -48,24 +53,24 @@ function App() {
       flexDirection="column"
       minHeight="100vh"
     >
-      <BrowserRouter>
+      <Router>
         <ScrollToTop />
         <Navbar />
         <Box component="main" flex="1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="item/:itemId" element={<ItemDetails />} />
-            <Route path="category/:categoryId" element={<ItemsPage />} />
-            <Route path="checkout" element={<Checkout />} />
-            <Route path="checkout/success" element={<Confirmation />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/item/:itemId" component={ItemDetails} />
+            <Route path="/category/:categoryId" component={ItemsPage} />
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/checkout/success" component={Confirmation} />
+            <Route component={NotFound} />
+          </Switch>
         </Box>
         <CartMenu />
         <Box>
           <Footer />
         </Box>
-      </BrowserRouter>
+      </Router>
     </Box>
   );
 }
