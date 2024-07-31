@@ -1,8 +1,9 @@
 {
   "name": "ecommerce-app",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && npm run build && cd .. && cd server && npm install",
+    "heroku-postbuild": "cd client && npm install && npm run build && cd .. && cd server && npm install --legacy-peer-deps",
     "start": "cd server && npm start"
   },
   "dependencies": {
@@ -37,5 +38,9 @@
     "pg": "^8.12.0",
     "stripe": "^16.5.0",
     "styled-components": "5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
   }
 }
