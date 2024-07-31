@@ -11,7 +11,9 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
       // RETRIEVE ITEM INFORMATION
       const lineItems = await Promise.all(
         products.map(async (product) => {
-          const item = await strapi.service("api::item.item").findOne(product.id);
+          const item = await strapi
+            .service("api::item.item")
+            .findOne(product.id);
           return {
             price_data: {
               currency: "usd",
@@ -28,8 +30,10 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         payment_method_types: ["card"],
         customer_email: email,
         mode: "payment",
-        success_url: process.env.SUCCESS_URL || "http://localhost:3000/checkout/success",
-        cancel_url: process.env.CANCEL_URL || "http://localhost:3000/checkout/failure",
+        success_url:
+          process.env.SUCCESS_URL || "http://localhost:3000/checkout/success",
+        cancel_url:
+          process.env.CANCEL_URL || "http://localhost:3000/checkout/failure",
         line_items: lineItems,
       });
 
