@@ -8,14 +8,20 @@ const app = express();
 const clientBuildPath = path.join(__dirname, "../client/build");
 app.use(express.static(clientBuildPath));
 
-// Log the path to ensure it's correct
+// Serve static files from the Strapi public folder
+const publicPath = path.join(__dirname, "../public");
+app.use(express.static(publicPath));
+
+// Log the paths to ensure they're correct
 console.log(`Serving static files from ${clientBuildPath}`);
+console.log(`Serving static files from ${publicPath}`);
 
 // Anything that doesn't match the above, send back index.html
 app.get("*", (req, res) => {
   res.sendFile(path.join(clientBuildPath, "index.html"));
 });
 
+// Start Strapi
 strapi()
   .start()
   .then(() => {
@@ -24,7 +30,6 @@ strapi()
   .catch((err) => {
     console.error("Strapi server failed to start", err);
   });
-
 
 // const path = require("path");
 // const express = require("express");
