@@ -8,7 +8,7 @@ module.exports = [
       enabled: true,
       origin: [
         "http://localhost:3000",
-        "https://your-frontend-app.herokuapp.com",
+        "https://stylish-one-7f1f35e5b636.herokuapp.com/",
       ],
     },
   },
