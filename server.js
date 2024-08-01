@@ -1,26 +1,39 @@
-const express = require('express');
-const path = require('path');
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const express = require("express");
+const path = require("path");
+const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Proxy for API 
-app.use('/api', createProxyMiddleware({
-  target: 'http://localhost:1337',
-  changeOrigin: true,
-}));
-
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, "client/build")));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'));
+// Proxy for API
+app.use(
+  "/api",
+  createProxyMiddleware({
+    target: "http://localhost:1337",
+    changeOrigin: true,
+  })
+);
+
+// Proxy admin requests to Strapi
+app.use(
+  "/admin",
+  createProxyMiddleware({
+    target: "http://localhost:1337",
+    changeOrigin: true,
+  })
+);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
+// ------------------------------
 // const strapi = require("@strapi/strapi");
 // const path = require("path");
 // const express = require("express");
