@@ -1,37 +1,35 @@
 const path = require("path");
 const express = require("express");
-const { createStrapiInstance } = require("@strapi/strapi");
+const strapi = require("@strapi/strapi"); // Správný import
 
 const app = express();
 
-// Serve static files from the React frontend app
+// Slouží statické soubory z React frontend aplikace
 const clientBuildPath = path.join(__dirname, "../client/build");
 app.use(express.static(clientBuildPath));
 
-// Serve static files from the Strapi public folder
-const publicPath = path.join(__dirname, "public");
+// Slouží statické soubory ze složky Strapi public
+const publicPath = path.join(__dirname, "../public");
 app.use(express.static(publicPath));
 
-// Log the paths to ensure they're correct
-console.log(`Serving static files from ${clientBuildPath}`);
-console.log(`Serving static files from ${publicPath}`);
+// Zaznamenává cesty pro ověření, že jsou správné
+console.log(`Slouží statické soubory z ${clientBuildPath}`);
+console.log(`Slouží statické soubory z ${publicPath}`);
 
-// Anything that doesn't match the above, send back index.html
+// Vše, co se neshoduje s výše uvedeným, vrací index.html
 app.get("*", (req, res) => {
   res.sendFile(path.join(clientBuildPath, "index.html"));
 });
 
-// Start Strapi
-const strapiInstance = createStrapiInstance();
-strapiInstance
+// Spustí Strapi
+strapi()
   .start()
   .then(() => {
-    console.log("Strapi server started successfully");
+    console.log("Strapi server byl úspěšně spuštěn");
   })
   .catch((err) => {
-    console.error("Strapi server failed to start", err);
+    console.error("Strapi server se nepodařilo spustit", err);
   });
-
 
 // const path = require("path");
 // const express = require("express");
