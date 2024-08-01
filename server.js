@@ -1,19 +1,15 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
 const app = express();
+const PORT = process.env.PORT || 5000;
 
-// Nastavení statických souborů z klientského buildu
-app.use(express.static(path.join(__dirname, "client/build")));
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
 
-// API routes budou obsluhovány zde
-app.use("/api", require("./server/api")); // Upravte podle potřeby
-
-// Catch-all handler: pro jakýkoli požadavek, který neodpovídá žádné cestě, odešlete zpět index.html
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
 
-const PORT = process.env.PORT || 1337;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

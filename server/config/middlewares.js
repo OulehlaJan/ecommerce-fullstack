@@ -8,7 +8,7 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
+          "connect-src": ["'self'", "http:", "https:"],
           "img-src": [
             "'self'",
             "data:",
@@ -30,7 +30,7 @@ module.exports = [
     name: "strapi::cors",
     config: {
       origin: [
-        "http://localhost:3000",
+        "http://localhost:5000",
         "https://stylish-one-7f1f35e5b636.herokuapp.com",
       ],
     },
@@ -41,10 +41,5 @@ module.exports = [
   "strapi::body",
   "strapi::session",
   "strapi::favicon",
-  {
-    name: "strapi::public",
-    config: {
-      path: path.resolve(__dirname, "../../server/public"),
-    },
-  },
+  "strapi::public",
 ];
