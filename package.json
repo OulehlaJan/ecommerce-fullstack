@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "heroku-postbuild": "cd client && npm install && npm run build && cd ../server && npm install",
-    "start": "node server.js",
-    "start-client": "npm run build && serve -s build"
+    "start-client": "node server.js",
+    "start-server": "cd server && npm start"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -23,6 +23,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
     "better-sqlite3": "8.6.0",
+    "concurrently": "^8.2.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "formik": "^2.4.6",
