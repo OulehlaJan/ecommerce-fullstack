@@ -1,7 +1,14 @@
 const express = require('express');
 const path = require('path');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Proxy for API 
+app.use('/api', createProxyMiddleware({
+  target: 'http://localhost:1337',
+  changeOrigin: true,
+}));
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
