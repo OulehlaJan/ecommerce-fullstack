@@ -1,5 +1,7 @@
 const path = require("path");
 
+console.log("Loading config/database.js...");
+
 module.exports = ({ env }) => {
   const client = env("DATABASE_CLIENT", "postgres");
 
@@ -35,7 +37,7 @@ module.exports = ({ env }) => {
   };
 
   console.log(`Using database client: ${client}`);
-  console.log(connections[client]);
+  console.log("Postgres connection:", connections.postgres);
 
   return {
     connection: {
