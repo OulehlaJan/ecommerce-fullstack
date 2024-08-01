@@ -39,5 +39,10 @@ module.exports = [
   "strapi::body",
   "strapi::session",
   "strapi::favicon",
-  "strapi::public",
+  {
+    name: "strapi::public",
+    config: {
+      path: path.resolve(__dirname, "../public"),
+    },
+  },
 ];
