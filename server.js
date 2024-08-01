@@ -4,13 +4,17 @@ const express = require("express");
 
 const app = express();
 
-// Serve static files from the React frontend app
+// Serve static files from the React frontend app build folder
 const clientBuildPath = path.join(__dirname, "client/build");
 app.use(express.static(clientBuildPath));
 
-// Additional logging for debugging
+// Serve static files from the new public folder
+const publicPath = path.join(__dirname, "public");
+app.use(express.static(publicPath));
+
 console.log("__dirname:", __dirname);
 console.log("clientBuildPath:", clientBuildPath);
+console.log("publicPath:", publicPath);
 
 // Anything that doesn't match the above, send back index.html
 app.get("*", (req, res) => {
@@ -22,7 +26,7 @@ strapi({
   dir: path.resolve(__dirname, "server"),
   appPath: path.resolve(__dirname, "server"),
   staticPaths: {
-    public: path.resolve(__dirname, "server/public"),
+    public: publicPath, // Use the new public path
   },
 })
   .start()
