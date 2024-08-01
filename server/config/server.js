@@ -5,10 +5,7 @@ module.exports = ({ env }) => {
 
   // Log the paths to ensure they're correct
   console.log("__dirname in config/server.js:", __dirname);
-  console.log(
-    "Resolved path to public folder:",
-    path.resolve(__dirname, "../../server/public")
-  );
+  console.log("Resolved path to public folder:", publicPath);
 
   return {
     host: env("HOST", "0.0.0.0"),
