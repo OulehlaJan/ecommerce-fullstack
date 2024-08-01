@@ -1,5 +1,7 @@
 const path = require("path");
 
+console.log("Loading server.js...");
+
 module.exports = ({ env }) => {
   const publicPath = path.resolve(__dirname, "../../public");
 
@@ -21,7 +23,6 @@ module.exports = ({ env }) => {
     },
   };
 };
-
 
 // module.exports = ({ env }) => ({
 //   host: env("HOST", "0.0.0.0"),
