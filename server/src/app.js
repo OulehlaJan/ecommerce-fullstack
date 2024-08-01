@@ -1,6 +1,6 @@
 const path = require("path");
 const express = require("express");
-const strapi = require("@strapi/strapi");
+const { createStrapiInstance } = require("@strapi/strapi");
 
 const app = express();
 
@@ -9,7 +9,7 @@ const clientBuildPath = path.join(__dirname, "../client/build");
 app.use(express.static(clientBuildPath));
 
 // Serve static files from the Strapi public folder
-const publicPath = path.join(__dirname, "../server/public");
+const publicPath = path.join(__dirname, "public");
 app.use(express.static(publicPath));
 
 // Log the paths to ensure they're correct
@@ -22,7 +22,8 @@ app.get("*", (req, res) => {
 });
 
 // Start Strapi
-strapi()
+const strapiInstance = createStrapiInstance();
+strapiInstance
   .start()
   .then(() => {
     console.log("Strapi server started successfully");
@@ -30,6 +31,7 @@ strapi()
   .catch((err) => {
     console.error("Strapi server failed to start", err);
   });
+
 
 // const path = require("path");
 // const express = require("express");
