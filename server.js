@@ -12,9 +12,18 @@ app.use(express.static(clientBuildPath));
 const publicPath = path.join(__dirname, "server/public");
 app.use(express.static(publicPath));
 
-// Log the paths to ensure they're correct
 console.log(`Serving static files from ${clientBuildPath}`);
 console.log(`Serving static files from ${publicPath}`);
+
+// Additional logging for debugging
+console.log("__dirname:", __dirname);
+console.log("clientBuildPath:", clientBuildPath);
+console.log("publicPath:", publicPath);
+console.log(`Serving static files from ${clientBuildPath}`);
+console.log(`Serving static files from ${publicPath}`);
+console.log(`__dirname: ${__dirname}`);
+console.log(`Client Build Path: ${clientBuildPath}`);
+console.log(`Public Path: ${publicPath}`);
 
 // Anything that doesn't match the above, send back index.html
 app.get("*", (req, res) => {

@@ -1,10 +1,37 @@
-module.exports = ({ env }) => ({
-  host: env("HOST", "0.0.0.0"),
-  port: env.int("PORT", 1337),
-  app: {
-    keys: env.array("APP_KEYS"),
-  },
-  webhooks: {
-    populateRelations: env.bool("WEBHOOKS_POPULATE_RELATIONS", false),
-  },
-});
+const path = require("path");
+
+module.exports = ({ env }) => {
+  const publicPath = path.resolve(__dirname, "../../server/public");
+
+  // Log the paths to ensure they're correct
+  console.log("__dirname in config/server.js:", __dirname);
+  console.log(
+    "Resolved path to public folder:",
+    path.resolve(__dirname, "../../server/public")
+  );
+
+  return {
+    host: env("HOST", "0.0.0.0"),
+    port: env.int("PORT", 1337),
+    app: {
+      keys: env.array("APP_KEYS"),
+    },
+    webhooks: {
+      populateRelations: env.bool("WEBHOOKS_POPULATE_RELATIONS", false),
+    },
+    dirs: {
+      public: publicPath,
+    },
+  };
+};
+
+// module.exports = ({ env }) => ({
+//   host: env("HOST", "0.0.0.0"),
+//   port: env.int("PORT", 1337),
+//   app: {
+//     keys: env.array("APP_KEYS"),
+//   },
+//   webhooks: {
+//     populateRelations: env.bool("WEBHOOKS_POPULATE_RELATIONS", false),
+//   },
+// });
