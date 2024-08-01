@@ -54,7 +54,7 @@ const ShoppingList = () => {
     setVisibleItems((preVisibleItems) => preVisibleItems + increment);
   };
 
-  const filteredItems = items.filter((item) => {
+  const filteredItems = (items || []).filter((item) => {
     if (value === "all") return true;
     return item.attributes.category === value;
   });
