@@ -1,10 +1,18 @@
+const path = require("path");
+
 module.exports = ({ env }) => ({
   proxy: true,
-  host: "0.0.0.0",
+  host: env("HOST", "0.0.0.0"),
   port: env.int("PORT", 1337),
   url: env("MY_HEROKU_URL"),
   app: {
     keys: env.array("APP_KEYS"),
+  },
+  webhooks: {
+    populateRelations: env.bool("WEBHOOKS_POPULATE_RELATIONS", false),
+  },
+  dirs: {
+    public: path.resolve(__dirname, "../../public"),
   },
   admin: {
     auth: {
