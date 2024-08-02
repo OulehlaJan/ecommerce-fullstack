@@ -19,5 +19,15 @@
   "engines": {
     "node": "18.20.4",
     "npm": ">=6.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-private-methods",
+      "@babel/plugin-proposal-private-property-in-object"
+    ]
   }
 }
