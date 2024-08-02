@@ -11,8 +11,9 @@ app.use(express.static(path.join(__dirname, "client/build")));
 app.use(
   "/api",
   createProxyMiddleware({
-    target: "http://localhost:1337",
+    target: STRAPI_URL,
     changeOrigin: true,
+    pathRewrite: { "^/api": "" },
   })
 );
 
@@ -20,10 +21,28 @@ app.use(
 app.use(
   "/admin",
   createProxyMiddleware({
-    target: "http://localhost:1337",
+    target: STRAPI_URL,
     changeOrigin: true,
   })
 );
+
+// // Proxy for API
+// app.use(
+//   "/api",
+//   createProxyMiddleware({
+//     target: "http://localhost:1337",
+//     changeOrigin: true,
+//   })
+// );
+
+// // Proxy admin requests to Strapi
+// app.use(
+//   "/admin",
+//   createProxyMiddleware({
+//     target: "http://localhost:1337",
+//     changeOrigin: true,
+//   })
+// );
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
