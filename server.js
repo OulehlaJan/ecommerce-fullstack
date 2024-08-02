@@ -1,30 +1,30 @@
 const express = require("express");
 const path = require("path");
-const { createProxyMiddleware } = require("http-proxy-middleware");
+// const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 const PORT = process.env.EXPRESS_PORT || 5000;
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
 
-// Proxy for API
-app.use(
-  "/api",
-  createProxyMiddleware({
-    target: STRAPI_URL,
-    changeOrigin: true,
-    pathRewrite: { "^/api": "" },
-  })
-);
+// // Proxy for API
+// app.use(
+//   "/api",
+//   createProxyMiddleware({
+//     target: STRAPI_URL,
+//     changeOrigin: true,
+//     pathRewrite: { "^/api": "" },
+//   })
+// );
 
-// Proxy admin requests to Strapi
-app.use(
-  "/admin",
-  createProxyMiddleware({
-    target: STRAPI_URL,
-    changeOrigin: true,
-  })
-);
+// // Proxy admin requests to Strapi
+// app.use(
+//   "/admin",
+//   createProxyMiddleware({
+//     target: STRAPI_URL,
+//     changeOrigin: true,
+//   })
+// );
 
 // // Proxy for API
 // app.use(
