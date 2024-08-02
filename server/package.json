@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
+  "author": {
+    "name": "A Strapi developer"
+  },
   "scripts": {
     "start": "strapi start"
   },
@@ -19,9 +22,6 @@
     "react-router-dom": "^5.3.4",
     "stripe": "^16.6.0",
     "styled-components": "^5.3.3"
-  },
-  "author": {
-    "name": "A Strapi developer"
   },
   "strapi": {
     "uuid": "fad84e3a-005d-4808-870f-c711b711f985"
