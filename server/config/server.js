@@ -12,7 +12,7 @@ module.exports = ({ env }) => ({
     populateRelations: env.bool("WEBHOOKS_POPULATE_RELATIONS", false),
   },
   dirs: {
-    public: path.resolve(__dirname, "../../public"),
+    public: path.resolve(__dirname, "../public"),
   },
   admin: {
     auth: {
