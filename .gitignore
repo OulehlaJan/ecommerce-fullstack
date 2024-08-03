@@ -2,7 +2,7 @@
 node_modules/
 
 # Build directories
-build/
+# build/
 dist/
 
 # Local environment files
