@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "strapi start",
-    "build": "strapi build"
+    "build": "strapi build",
+    "develop": "strapi develop"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "^4.25.1",
