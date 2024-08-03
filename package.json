@@ -5,7 +5,7 @@
   "scripts": {
     "heroku-postbuild": "cd client && npm install && npm run build && cd ../server && npm install",
     "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
-    "start-client": "node server.js",
+    "start-client": "npm start",
     "start-server": "cd server && npm start"
   },
   "dependencies": {

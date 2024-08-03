@@ -4,7 +4,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 5000;
-const STRAPI_URL = process.env.MY_HEROKU_URL;
+const STRAPI_URL = "https://stylish-one-7f1f35e5b636.herokuapp.com/";
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
@@ -25,6 +25,7 @@ app.use(
   createProxyMiddleware({
     target: STRAPI_URL,
     changeOrigin: true,
+    pathRewrite: { "^/admin": "/admin" },
   })
 );
 
