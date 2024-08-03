@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && npm run build && cd ../server && npm install && npm run build",
-    "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
-    "start-client": "node server.js",
-    "start-server": "cd server && npm start"
+    "heroku-postbuild": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "node server.js"
   },
   "dependencies": {
     "@babel/core": "^7.21.0",
