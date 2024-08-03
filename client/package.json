@@ -52,6 +52,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:1337",
+  "proxy": "https://stylish-one-7f1f35e5b636.herokuapp.com/",
   "homepage": "/"
 }
