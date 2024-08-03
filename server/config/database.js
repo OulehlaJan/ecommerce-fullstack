@@ -14,6 +14,10 @@ module.exports = ({ env }) => {
         password,
         ssl: { rejectUnauthorized: false },
       },
+      pool: {
+        min: 0,
+        max: 5, // snížený limit připojení
+      },
       debug: false,
     },
   };

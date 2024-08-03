@@ -6,17 +6,21 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "http:", "https:"],
+          "connect-src": ["'self'", "https:"],
           "img-src": [
             "'self'",
             "data:",
             "blob:",
+            "market-assets.strapi.io",
+            "res.cloudinary.com",
             "https://stylish-one-7f1f35e5b636.herokuapp.com",
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
+            "market-assets.strapi.io",
+            "res.cloudinary.com",
             "https://stylish-one-7f1f35e5b636.herokuapp.com",
           ],
           upgradeInsecureRequests: null,
