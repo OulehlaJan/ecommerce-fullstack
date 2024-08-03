@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 const STRAPI_URL = process.env.MY_HEROKU_URL;
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 // Proxy for API
 app.use(
@@ -29,7 +29,7 @@ app.use(
 );
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build/index.html"));
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 app.listen(PORT, () => {
