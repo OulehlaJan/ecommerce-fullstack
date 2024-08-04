@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -43,8 +44,18 @@ module.exports = {
   ],
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+        },
+      }),
+    ],
     splitChunks: {
-      chunks: "all", // Rozdělení kódu na menší části, což může pomoci s pamětí a zlepšit výkon
+      chunks: "all",
     },
   },
 };
