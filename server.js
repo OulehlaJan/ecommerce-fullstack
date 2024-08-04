@@ -3,10 +3,10 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 5000;
-const STRAPI_URL =
-  process.env.NODE_ENV === "production"
-    ? process.env.MY_HEROKU_URL
-    : "http://localhost:1337";
+// const STRAPI_URL =
+//   process.env.NODE_ENV === "production"
+//     ? process.env.MY_HEROKU_URL
+//     : "http://localhost:1337";
 
 // // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "client/build")));
@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "client/build")));
 app.use(
   "/api",
   createProxyMiddleware({
-    target: STRAPI_URL,
+    target: "http://localhost:1337",
     changeOrigin: true,
     pathRewrite: { "^/api": "" },
   })
@@ -25,7 +25,7 @@ app.use(
 app.use(
   "/admin",
   createProxyMiddleware({
-    target: STRAPI_URL,
+    target: "http://localhost:1337",
     changeOrigin: true,
   })
 );
