@@ -2,7 +2,7 @@ import axios from "axios";
 import { API_URL } from "./config";
 
 // Fetch categories - using for:
-// Navbar
+// Navbar.jsx
 export const fetchCategories = async () => {
   try {
     const response = await axios.get(`${API_URL}/items?populate=image`);
@@ -21,14 +21,3 @@ export const fetchCategories = async () => {
     return [];
   }
 };
-
-
-// export const fetchCategories = async () => {
-//   const response = await axios.get(`${API_URL}/items?populate=image`);
-//   const uniqueCategories = [
-//     ...new Set(
-//       response.data.data.map((item) => item.attributes.clothingTypeCategory)
-//     ),
-//   ];
-//   return uniqueCategories;
-// };

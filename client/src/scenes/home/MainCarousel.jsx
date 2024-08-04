@@ -125,7 +125,7 @@ const MainCarousel = () => {
             left: { md: "50%", sm: "50%", xs: "45%" },
             transform: "translateX(-50%)",
             color: "white",
-            zIndex: "11",
+            zIndex: "9",
             animation: "bounce 2s infinite",
             "@keyframes bounce": {
               "0%, 100%": {

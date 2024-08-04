@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { shades } from "../theme";
-import { fetchSizes } from "../api/sizes";
 import {
   IconButton,
   Box,
@@ -29,36 +28,18 @@ const Item = ({ item, width, useLazyLoad = true }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [liked, setLiked] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [sizes, setSizes] = useState([]);
   const [sizeIndex, setSizeIndex] = useState(0);
   const {
     palette: { neutral },
   } = useTheme();
 
-  const { category, price, name, image } = item.attributes;
-  const {
-    data: {
-      attributes: {
-        formats: {
-          medium: { url },
-        },
-      },
-    },
-  } = image;
-
-  // Function to fetch sizes
-  const getSizes = async (itemId) => {
-    try {
-      const sizes = await fetchSizes(itemId);
-      setSizes(sizes);
-    } catch (error) {
-      console.error("Error fetching sizes:", error);
-    }
-  };
-
-  useEffect(() => {
-    getSizes(item.id);
-  }, [item.id]);
+  const category = item?.attributes?.category || "No category";
+  const price = item?.attributes?.price || "No price";
+  const name = item?.attributes?.name || "No name";
+  const image =
+    item?.attributes?.image?.data?.attributes?.formats?.medium?.url ||
+    "No image";
+  const sizes = item?.attributes?.sizes || "No sizes";
 
   const handleFavoriteIconClick = () => {
     setLiked(!liked);
@@ -115,7 +96,7 @@ const Item = ({ item, width, useLazyLoad = true }) => {
           alt={item.name}
           width="300px"
           height="400px"
-          src={`http://localhost:1337${url}`}
+          src={`http://localhost:1337${image}`}
           onClick={() => history.push(`/item/${item.id}`)}
           onLoad={handleImageLoad}
           style={{ display: loading ? "none" : "block", cursor: "pointer" }}
