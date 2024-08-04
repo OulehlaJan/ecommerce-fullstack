@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "heroku-postbuild": "cd client && npm install && npm run build && cd ../server && npm install && npm run build",
-    "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
-    "start-client": "npm start",
-    "start-server": "npm start"
+    "start": "npm run start:server",
+    "heroku-postbuild": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm install && npm run build",
+    "build:server": "cd server && npm install && npm run build",
+    "start:server": "cd server && npm start"
   },
   "dependencies": {
     "concurrently": "^8.2.2",

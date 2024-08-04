@@ -7,6 +7,7 @@
     "name": "A Strapi developer"
   },
   "scripts": {
+    "heroku-postbuild": "npm run build",
     "start": "strapi start",
     "build": "strapi build",
     "develop": "strapi develop"
