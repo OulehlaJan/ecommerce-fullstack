@@ -8,7 +8,7 @@
   },
   "scripts": {
     "heroku-postbuild": "npm run build",
-    "start": "strapi start",
+    "start": "PORT=1337 strapi start",
     "build": "strapi build",
     "develop": "strapi develop"
   },
