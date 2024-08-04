@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"NODE_OPTIONS='--max_old_space_size=1024' npm run start:client\" \"NODE_OPTIONS='--max_old_space_size=1024' npm run start:server\"",
-    "heroku-postbuild": "NODE_OPTIONS='--max_old_space_size=1024' npm run build:client && npm run build:server",
+    "start": "npm run start:server",
+    "heroku-postbuild": "npm run build:server",
     "build:client": "cd client && npm install && npm run build",
     "build:server": "cd server && npm install && npm run build",
     "start:server": "cd server && npm start",
