@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "heroku-postbuild": "cd client && npm install && npm run build && cd ../server && npm install && npm run build && npm start",
-    "start": "node server.js",
+    "start": "npn start",
     "start-client": "cd client && npm start",
     "start-server": "cd server && npm start"
   },
