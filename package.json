@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
-    "heroku-postbuild": "npm run build:client && npm run build:server",
+    "start": "npm run start:client",
+    "heroku-postbuild": "npm run build:client",
     "build:client": "cd client && npm install && npm run build",
     "build:server": "cd server && npm install && npm run build",
     "start:server": "cd server && npm start"
