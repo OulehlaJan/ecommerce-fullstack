@@ -1,0 +1,9 @@
+build:
+  commands:
+    - cd server && npm install
+    - cd client && npm install && npm run build
+  buildpacks:
+    - heroku/nodejs
+
+run:
+  web: cd server && npm start
