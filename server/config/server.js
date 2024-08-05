@@ -11,4 +11,5 @@ module.exports = ({ env }) => ({
       secret: env("ADMIN_JWT_SECRET"),
     },
   },
+  url: env("MY_HEROKU_URL", "http://localhost:1337"),
 });
