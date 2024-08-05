@@ -1,11 +1,15 @@
-const express = require("express");
 const { createProxyMiddleware } = require("http-proxy-middleware");
+const express = require("express");
 const path = require("path");
-const { spawn } = require("child_process");
 const app = express();
-const PORT = process.env.PORT || 5000;
-const STRAPI_PORT = process.env.STRAPI_PORT || 1337;
-const STRAPI_URL = `http://localhost:${STRAPI_PORT}`;
+const PORT = process.env.PORT || 1337;
+const STRAPI_URL =
+  process.env.NODE_ENV === "production"
+    ? process.env.MY_HEROKU_URL
+    : "http://localhost:1337";
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "client/build")));
 
 // Proxy for API
 app.use(
@@ -14,7 +18,6 @@ app.use(
     target: STRAPI_URL,
     changeOrigin: true,
     pathRewrite: { "^/api": "" },
-    logLevel: "debug",
   })
 );
 
@@ -24,30 +27,15 @@ app.use(
   createProxyMiddleware({
     target: STRAPI_URL,
     changeOrigin: true,
-    logLevel: "debug",
   })
 );
-
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-
-  const strapiProcess = spawn("npm", ["run", "start:server"], {
-    stdio: "inherit",
-    cwd: path.resolve(__dirname, "server"),
-    shell: true,
-  });
-
-  process.on("SIGINT", () => {
-    strapiProcess.kill("SIGINT");
-    process.exit();
-  });
+  console.log("Server is running on port " + PORT);
 });
 
 // const { createProxyMiddleware } = require("http-proxy-middleware");
