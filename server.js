@@ -1,24 +1,15 @@
-const express = require("express");
 const { createProxyMiddleware } = require("http-proxy-middleware");
+const express = require("express");
 const path = require("path");
-const cors = require("cors");
-const { spawn } = require("child_process"); // Přidání tohoto řádku
 const app = express();
-const PORT = process.env.PORT || 5000;
-const STRAPI_PORT = process.env.STRAPI_PORT || 1337; // Strapi bude běžet na tomto portu
-const STRAPI_URL = `http://localhost:${STRAPI_PORT}`; // Interní URL pro Strapi
+const PORT = process.env.PORT || 1337;
+const STRAPI_URL =
+  process.env.NODE_ENV === "production"
+    ? process.env.MY_HEROKU_URL
+    : "http://localhost:1337";
 
-// Nastavení CORS middleware
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://stylish-one-7f1f35e5b636.herokuapp.com",
-    ],
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "client/build")));
 
 // Proxy for API
 app.use(
@@ -27,7 +18,6 @@ app.use(
     target: STRAPI_URL,
     changeOrigin: true,
     pathRewrite: { "^/api": "" },
-    logLevel: "debug",
   })
 );
 
@@ -37,31 +27,15 @@ app.use(
   createProxyMiddleware({
     target: STRAPI_URL,
     changeOrigin: true,
-    logLevel: "debug",
   })
 );
-
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, "client/build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-  // Spuštění Strapi serveru jako samostatného procesu
-  const strapiProcess = spawn("npm", ["server"], {
-    stdio: "inherit",
-    cwd: path.resolve(__dirname, "server"),
-    shell: true,
-  });
-
-  // Handle cleanup when the process is terminated
-  process.on("SIGINT", () => {
-    strapiProcess.kill("SIGINT");
-    process.exit();
-  });
+  console.log("Server is running on port " + PORT);
 });
 
 // const { createProxyMiddleware } = require("http-proxy-middleware");
