@@ -2,6 +2,7 @@ const express = require("express");
 const { createProxyMiddleware } = require("http-proxy-middleware");
 const path = require("path");
 const cors = require("cors");
+const { spawn } = require("child_process"); // Přidání tohoto řádku
 const app = express();
 const PORT = process.env.PORT || 5000;
 const STRAPI_PORT = process.env.STRAPI_PORT || 1337; // Strapi bude běžet na tomto portu
@@ -50,7 +51,6 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   // Spuštění Strapi serveru jako samostatného procesu
-  const { spawn } = require("child_process");
   const strapiProcess = spawn("npm", ["run", "start:server"], {
     stdio: "inherit",
     cwd: path.resolve(__dirname, "server"),
