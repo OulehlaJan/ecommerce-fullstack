@@ -9,7 +9,9 @@
   "scripts": {
     "heroku-postbuild": "npm run build",
     "start": "strapi start",
+    "start:server": "strapi start",
     "build": "strapi build",
+    "build:server": "npm install && npm run build",
     "develop": "strapi develop"
   },
   "dependencies": {
