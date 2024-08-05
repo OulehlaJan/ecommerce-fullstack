@@ -51,7 +51,7 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   // Spuštění Strapi serveru jako samostatného procesu
-  const strapiProcess = spawn("npm", ["run", "start:server"], {
+  const strapiProcess = spawn("npm", ["server"], {
     stdio: "inherit",
     cwd: path.resolve(__dirname, "server"),
     shell: true,
