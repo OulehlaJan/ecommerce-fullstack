@@ -13,9 +13,7 @@ module.exports = [
             "blob:",
             "market-assets.strapi.io",
             "res.cloudinary.com",
-            "https://stylish-one-7f1f35e5b636.herokuapp.com",
-            "http://localhost:3000",
-            "http://localhost:5000",
+            "https://stylish-one.netlify.app",
           ],
           "media-src": [
             "'self'",
@@ -23,9 +21,7 @@ module.exports = [
             "blob:",
             "market-assets.strapi.io",
             "res.cloudinary.com",
-            "https://stylish-one-7f1f35e5b636.herokuapp.com",
-            "http://localhost:3000",
-            "http://localhost:5000",
+            "https://stylish-one.netlify.app",
           ],
           upgradeInsecureRequests: null,
         },
@@ -35,11 +31,8 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      origin: [
-        "https://stylish-one-7f1f35e5b636.herokuapp.com",
-        "http://localhost:3000",
-        "http://localhost:5000",
-      ],
+      enabled: true,
+      origin: ["https://stylish-one.netlify.app"],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"],
       keepHeaderOnError: true,
