@@ -13,7 +13,7 @@ module.exports = [
             "blob:",
             "market-assets.strapi.io",
             "res.cloudinary.com",
-            "https://stylish-one.netlify.app",
+            
           ],
           "media-src": [
             "'self'",
@@ -21,7 +21,7 @@ module.exports = [
             "blob:",
             "market-assets.strapi.io",
             "res.cloudinary.com",
-            "https://stylish-one.netlify.app",
+            
           ],
           upgradeInsecureRequests: null,
         },
