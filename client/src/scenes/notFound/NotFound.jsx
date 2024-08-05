@@ -4,6 +4,10 @@ import { useHistory } from "react-router-dom";
 const NotFound = () => {
   const history = useHistory();
 
+  const handleAdminRedirect = () => {
+    window.location.href = '/admin'; // Přímé přesměrování na admin dashboard
+  };
+
   return (
     <Box
       display="flex"
@@ -23,7 +27,7 @@ const NotFound = () => {
         The page you're looking for doesn't exist.
       </Typography>
       <Button
-        onClick={() => history.push("/")}
+        onClick={() => history.push(handleAdminRedirect)}
         variant="contained"
         color="primary"
         sx={{
