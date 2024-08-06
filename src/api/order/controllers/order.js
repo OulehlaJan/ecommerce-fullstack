@@ -31,9 +31,9 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         customer_email: email,
         mode: "payment",
         success_url:
-          process.env.SUCCESS_URL || "https://stylish-one.netlify.app/checkout/success",
+          process.env.SUCCESS_URL || "http://localhost:3000/checkout/success",
         cancel_url:
-          process.env.CANCEL_URL || "",
+          process.env.CANCEL_URL || "http://localhost:3000/checkout/cancel",
         line_items: lineItems,
       });
 
