@@ -1,0 +1,11 @@
+[build]
+  base    = ""
+  publish = "client/build"
+  command = "cd client && npm install && npm run build"
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "cd client && npm install && npm run build"
+  publish = "client/build"
