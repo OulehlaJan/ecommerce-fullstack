@@ -52,45 +52,45 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     }
   },
 
-  // HANDLE STRIPE WEBHOOK EVENTS
-  async handleWebhook(ctx) {
-    const sig = ctx.request.headers["stripe-signature"];
-    let event;
+  // // HANDLE STRIPE WEBHOOK EVENTS
+  // async handleWebhook(ctx) {
+  //   const sig = ctx.request.headers["stripe-signature"];
+  //   let event;
 
-    try {
-      event = stripe.webhooks.constructEvent(
-        ctx.request.body,
-        sig,
-        process.env.STRIPE_WEBHOOK_SECRET
-      );
-    } catch (err) {
-      ctx.response.status = 400;
-      ctx.body = `Webhook Error: ${err.message}`;
-      return;
-    }
+  //   try {
+  //     event = stripe.webhooks.constructEvent(
+  //       ctx.request.body,
+  //       sig,
+  //       process.env.STRIPE_WEBHOOK_SECRET
+  //     );
+  //   } catch (err) {
+  //     ctx.response.status = 400;
+  //     ctx.body = `Webhook Error: ${err.message}`;
+  //     return;
+  //   }
 
-    // HANDLE THE EVENT
-    switch (event.type) {
-      case "checkout.session.completed":
-        const session = event.data.object;
-        // UPDATE ORDER STATUS TO "PAID"
-        await strapi.service("api::order.order").update({
-          where: { stripeSessionId: session.id },
-          data: { status: "paid" },
-        });
-        break;
-      case "payment_intent.payment_failed":
-        const failedIntent = event.data.object;
-        // Handle the failed payment intent
-        await strapi.service("api::order.order").update({
-          where: { stripeSessionId: failedIntent.id },
-          data: { status: "failed" },
-        });
-        break;
-      default:
-        console.log(`Unhandled event type ${event.type}`);
-    }
+  //   // HANDLE THE EVENT
+  //   switch (event.type) {
+  //     case "checkout.session.completed":
+  //       const session = event.data.object;
+  //       // UPDATE ORDER STATUS TO "PAID"
+  //       await strapi.service("api::order.order").update({
+  //         where: { stripeSessionId: session.id },
+  //         data: { status: "paid" },
+  //       });
+  //       break;
+  //     case "payment_intent.payment_failed":
+  //       const failedIntent = event.data.object;
+  //       // Handle the failed payment intent
+  //       await strapi.service("api::order.order").update({
+  //         where: { stripeSessionId: failedIntent.id },
+  //         data: { status: "failed" },
+  //       });
+  //       break;
+  //     default:
+  //       console.log(`Unhandled event type ${event.type}`);
+  //   }
 
-    ctx.send({ received: true });
-  },
+  //   ctx.send({ received: true });
+  // },
 }));
