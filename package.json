@@ -2,19 +2,18 @@
   "name": "root",
   "private": true,
   "version": "0.1.0",
-  "description": "For server",
+  "description": "Root for server",
+  "license": "Proprietary License",
   "author": {
     "name": "Jan Oulehla"
   },
   "scripts": {
-    "start": "npm run start:server",
     "heroku-postbuild": "npm run build:server",
-    "build:server": "cd server && npm install && npm run build",
-    "start:server": "cd server && npm start"
+    "start:server": "cd server && npm start",
+    "build:server": "cd server && npm install && npm run build"
   },
   "engines": {
     "node": "18.20.4",
     "npm": ">=6.0.0"
-  },
-  "license": "" 
+  }
 }

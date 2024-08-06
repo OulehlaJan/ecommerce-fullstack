@@ -2,7 +2,8 @@
   "name": "server",
   "private": true,
   "version": "0.1.0",
-  "description": "Strapi CMS",
+  "description": "Strapi CMS & PostgreSQL",
+  "license": "Proprietary License",
   "author": {
     "name": "Jan Oulehla"
   },
@@ -37,6 +38,5 @@
   "engines": {
     "node": "18.20.4",
     "npm": ">=6.0.0"
-  },
-  "license": "Proprietary License"
+  }
 }
