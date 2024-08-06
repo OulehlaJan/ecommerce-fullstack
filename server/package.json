@@ -2,13 +2,12 @@
   "name": "server",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Strapi CMS",
   "author": {
-    "name": "A Strapi developer"
+    "name": "Jan Oulehla"
   },
   "scripts": {
     "start": "strapi start",
-    "start:server": "strapi start",
     "build": "strapi build",
     "develop": "strapi develop"
   },
@@ -39,5 +38,5 @@
     "node": "18.20.4",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "Proprietary License"
 }
