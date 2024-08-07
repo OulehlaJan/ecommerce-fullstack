@@ -98,8 +98,9 @@ const AboutUsSection = () => {
                   p: "10px",
                   fontSize: { md: "15px", sm: "14px", xs: "11px" },
                   borderRadius: "3px",
-                  backgroundColor: "#222222",
+                  textDecoration: "none",
                   color: "white",
+                  backgroundColor: "#222222",
                   "@media (min-width: 960px)": {
                     "&:hover": {
                       backgroundColor: "rgba(34, 34, 34, 0.05)",
