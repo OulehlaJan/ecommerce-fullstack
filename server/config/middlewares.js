@@ -14,6 +14,7 @@ module.exports = [
             "market-assets.strapi.io",
             "res.cloudinary.com",
             "https://stylish-one.netlify.app",
+            "https://preview-stylish-one.netlify.app",
             "http://localhost:3000",
           ],
           "media-src": [
@@ -23,6 +24,7 @@ module.exports = [
             "market-assets.strapi.io",
             "res.cloudinary.com",
             "https://stylish-one.netlify.app",
+            "https://preview-stylish-one.netlify.app",
             "http://localhost:3000",
           ],
           upgradeInsecureRequests: null,
@@ -49,7 +51,11 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      origin: ["https://stylish-one.netlify.app", "http://localhost:3000"],
+      origin: [
+        "https://stylish-one.netlify.app",
+        "http://localhost:3000",
+        "https://preview-stylish-one.netlify.app",
+      ],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"],
       keepHeaderOnError: true,
