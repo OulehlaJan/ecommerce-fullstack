@@ -58,7 +58,7 @@
 ### Content Management
 
 + **STRAPI headless CMS** for managing content and data models.
-+ **Order Management** Strapi handles order data, including processing and storing order details.
++ **Order Management** Strapi provides the API and backend logic to handle order data.
 
 ### Media Management
 
