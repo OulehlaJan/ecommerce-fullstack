@@ -105,10 +105,12 @@ const AboutUsSection = () => {
                     "&:hover": {
                       backgroundColor: "rgba(34, 34, 34, 0.05)",
                       color: "black",
+                      textDecoration: "none",
                     },
                     "&:active": {
                       backgroundColor: "#222222",
                       color: "white",
+                      textDecoration: "none",
                     },
                   },
                 }}
