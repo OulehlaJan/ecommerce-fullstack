@@ -117,7 +117,6 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
                 zIndex: "9",
                 maxHeight: "300px",
                 overflowY: "auto",
-                // mt: "18px",
                 width: "100%",
                 backgroundColor: "rgba(255, 255, 255, 1)",
                 boxShadow: "0px 3px 2px rgba(0, 0, 0, 0.1)",
