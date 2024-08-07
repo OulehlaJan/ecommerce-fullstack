@@ -185,7 +185,7 @@ const ItemDetails = () => {
               ${item?.attributes?.price}
             </Typography>
             <Typography mt="20px" fontSize="15px">
-              {item?.attributes?.longDescription}
+              {item?.attributes?.shortDescription}
             </Typography>
           </Box>
 
