@@ -28,6 +28,22 @@ module.exports = [
           upgradeInsecureRequests: null,
         },
       },
+      hsts: {
+        maxAge: 31536000,
+        includeSubDomains: true,
+        preload: true,
+      },
+      xssProtection: {
+        enabled: true,
+        mode: "block",
+      },
+      frameguard: {
+        action: "deny",
+      },
+      noSniff: true,
+      referrerPolicy: {
+        policy: "no-referrer",
+      },
     },
   },
   {
