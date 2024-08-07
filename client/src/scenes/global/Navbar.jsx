@@ -26,6 +26,23 @@ import {
   Close as CloseIcon,
 } from "@mui/icons-material";
 import SearchBar from "./SearchBar";
+import styled from "@emotion/styled";
+
+// Change color based on searchOpen
+const StyledNavbar = styled(Box)(({ theme, searchOpen }) => ({
+  display: "flex",
+  alignItems: "center",
+  width: "100%",
+  height: "60px",
+  backgroundColor: searchOpen
+    ? "rgba(255, 255, 255, 1)"
+    : "rgba(255, 255, 255, 0.95)",
+  color: "black",
+  position: "fixed",
+  top: "0",
+  left: "0",
+  zIndex: "10",
+}));
 
 const Navbar = () => {
   const history = useHistory();
@@ -106,18 +123,7 @@ const Navbar = () => {
   };
 
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      width="100%"
-      height="60px"
-      backgroundColor="rgba(255, 255, 255, 0.95)"
-      color="black"
-      position="fixed"
-      top="0"
-      left="0"
-      zIndex="10"
-    >
+    <StyledNavbar searchOpen={searchOpen}>
       <Box
         width="80%"
         m="auto"
@@ -222,7 +228,7 @@ const Navbar = () => {
         searchOpen={searchOpen}
         handleToggleSearch={handleToggleSearch}
       />
-    </Box>
+    </StyledNavbar>
   );
 };
 
