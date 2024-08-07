@@ -13,7 +13,8 @@ import ItemDetails from "./scenes/itemDetails/ItemDetails";
 import ItemsPage from "./scenes/itemsPage/ItemsPage";
 import CartMenu from "./scenes/global/CartMenu";
 import Checkout from "./scenes/checkout/Checkout";
-import Confirmation from "./scenes/checkout/Confirmation";
+import SuccessPage from "./scenes/checkout/SuccessPage";
+import CancelPage from "./scenes/checkout/CancelPage";
 import NotFound from "./scenes/notFound/NotFound";
 
 // Scroll to top after refresh
@@ -61,8 +62,9 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/item/:itemId" component={ItemDetails} />
             <Route path="/category/:categoryId" component={ItemsPage} />
-            <Route path="/checkout" component={Checkout} />
-            <Route path="/checkout/success" component={Confirmation} />
+            <Route exact path="/checkout" component={Checkout} />
+            <Route path="/checkout/success" component={SuccessPage} />
+            <Route path="/checkout/cancel" component={CancelPage} />
             <Route
               path="/admin"
               render={() =>

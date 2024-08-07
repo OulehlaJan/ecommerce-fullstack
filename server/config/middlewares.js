@@ -33,7 +33,6 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      enabled: true,
       origin: ["https://stylish-one.netlify.app", "http://localhost:3000"],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"],

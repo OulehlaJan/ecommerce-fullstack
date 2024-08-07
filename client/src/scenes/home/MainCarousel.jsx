@@ -27,7 +27,7 @@ const MainCarousel = () => {
 
   const imgHeight = {
     width: "100%",
-    height: "700px",
+    height: "650px",
     objectFit: "cover",
     backgroundAttachment: "fixed",
     [theme.breakpoints.up("md")]: {
@@ -42,6 +42,7 @@ const MainCarousel = () => {
         showThumbs={false}
         showIndicators={false}
         showStatus={false}
+        swipeScrollTolerance={50}
         renderArrowPrev={(onClickHandler, hasPrev, label) => (
           <IconButton
             onClick={onClickHandler}
