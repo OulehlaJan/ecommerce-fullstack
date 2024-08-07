@@ -114,7 +114,7 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
                 },
               ]}
               sx={{
-                zIndex: "1",
+                zIndex: "9",
                 maxHeight: "300px",
                 overflowY: "auto",
                 pt: "18px",
@@ -131,7 +131,6 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
                         <MenuItem
                           sx={{
                             p: "13px 0 13px 11px",
-                            backgroundColor: "rgba(255, 255, 255, 1)",
                           }}
                           key={item.id}
                           onClick={() => handleItemClick(item.id)}
