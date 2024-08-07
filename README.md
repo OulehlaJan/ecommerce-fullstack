@@ -11,7 +11,7 @@
 
 <!-- Demo Link -->
 <h3 align="center">
-  <a href="https://stylish-one.netlify.app">Ecommerce - Stylish One</a> :point_left: <br />
+  <a href="https://stylish-one.netlify.app">Ecommerce - Stylish One</a> :point_left: <br/>
 </h3>
 
 <!-- GIF -->
@@ -37,10 +37,21 @@
 + **Lazy Loading on Products**
 + **Fully responsive**
 
+### Payment Gateway Integration
+
++ **Uses Stripe.js and Stripe Elements for secure payment collection on the client-side.**
+
 ## Server - Heroku
 
 <img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL-Dark.svg" width="68">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
+
+### Payment Gateway Integration
++ **Uses Stripe API for secure payment processing and order management on the server-side.**
+
+### Content Management
+
++ **STRAPI headless CMS** for managing content and data models.
 
 ### Media Management
 
