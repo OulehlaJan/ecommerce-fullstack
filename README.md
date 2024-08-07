@@ -10,9 +10,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/40c70173-088f-4486-af47-f2d5fb0a00f0/deploy-status)](https://app.netlify.com/sites/stylish-one/deploys) <br />
 
 <!-- Demo Link -->
-<p align="center">
+<h3 align="center">
   <a href="https://stylish-one.netlify.app">Ecommerce - Stylish One</a> :point_left: <br />
-</p>
+</h3>
 
 <!-- GIF -->
 <p align="center">
@@ -31,20 +31,30 @@
 <img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Redux.svg" width="68">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/client">More info</a>
 
+### Features
+
++ Lazy Loading on Products
++ Local Storage for Checkout
++ Fully responsive
+
 ## Server - Heroku
 
 <img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL-Dark.svg" width="68">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
 
+### Media Management
+
++ **Cloudinary**
+
 ### Security Settings
 
-+ Content Security Policy
-+ HTTP Strict Transport Security
-+ XSS Protection
-+ Frameguard
-+ NoSniff
-+ Referrer Policy
-+ Cross-Origin Resource Sharing
++ **Content Security Policy**
++ **HTTP Strict Transport Security**
++ **XSS Protection**
++ **Frameguard**
++ **NoSniff**
++ **Referrer Policy**
++ **Cross-Origin Resource Sharing**
 
 # &#129513; Dependencies
 
