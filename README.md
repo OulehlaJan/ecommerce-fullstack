@@ -31,15 +31,21 @@
 <img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Redux.svg" width="68"> 
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/client">More info</a>
 
+### Payment Gateway Integration
+
++ **Uses Stripe.js and Stripe Elements for secure payment collection on the client-side.**
+
 ### Features
 
 + **Local Storage for Checkout**: Stores checkout data in local storage and clears it once the order is placed.
 + **Lazy Loading on Products**
 + **Fully responsive**
 
-### Payment Gateway Integration
+### Validated Checkout Inputs
 
-+ **Uses Stripe.js and Stripe Elements for secure payment collection on the client-side.**
++ **Shipping Information**
++ **Billing Information**
++ **Contact Info**
 
 ## Server - Heroku
 
