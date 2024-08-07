@@ -22,20 +22,6 @@ const ShoppingList = () => {
   const isMd = useMediaQuery("(min-width:961px) and (max-width:1280px)");
   const isLg = useMediaQuery("(min-width:1280px)");
 
-  const getInitialVisibleItems = () => {
-    if (isXs) return 3;
-    if (isSm) return 4;
-    if (isMd) return 6;
-    if (isLg) return 8;
-  };
-
-  const [visibleItems, setVisibleItems] = useState(getInitialVisibleItems);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-    setVisibleItems(getInitialVisibleItems());
-  };
-
   const getItems = async () => {
     try {
       const items = await fetchItems();
@@ -49,9 +35,24 @@ const ShoppingList = () => {
     getItems();
   }, []); //eslint-disable-line react-hooks/exhaustive-deps
 
+  // Number of visible items per device size
+  const getInitialVisibleItems = () => {
+    if (isXs) return 3;
+    if (isSm) return 4;
+    if (isMd) return 6;
+    if (isLg) return 8;
+  };
+
+  const [visibleItems, setVisibleItems] = useState(getInitialVisibleItems);
+
   const loadMoreItems = () => {
     const increment = isXs ? 3 : isSm ? 4 : isMd ? 6 : 8;
     setVisibleItems((preVisibleItems) => preVisibleItems + increment);
+  };
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+    setVisibleItems(getInitialVisibleItems());
   };
 
   const filteredItems = (items || []).filter((item) => {
@@ -81,6 +82,7 @@ const ShoppingList = () => {
           display: "flex",
           justifyContent: "center",
           width: "100%",
+          m: "20px 0 30px 0",
         }}
       >
         <Tabs
@@ -90,16 +92,6 @@ const ShoppingList = () => {
           scrollButtons="auto"
           allowScrollButtonsMobile
           aria-label="scrollable auto tabs"
-          sx={{
-            margin: "20px 0 30px 0",
-            "& .MuiTabs-scrollButtons": {
-              transition: "opacity 0.3s ease, width 0.3s ease",
-              "&.Mui-disabled": {
-                width: "0",
-                opacity: "0",
-              },
-            },
-          }}
         >
           <Tab label="ALL" value="all" />
           <Tab label="NEW ARRIVALS" value="newArrivals" />
