@@ -29,10 +29,12 @@
 ## Client
 
 <img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Redux.svg" width="68">
+### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/client">More info</a>
 
 ## Server
 
 <img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL-Dark.svg" width="68">
+### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
 
 # &#129513; Dependencies
 
