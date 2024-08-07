@@ -16,7 +16,7 @@
 
 <!-- GIF -->
 <p align="center">
-  <img src="assets/.gif" />
+  <img src="assets/StylishOne.gif" />
 </p>
 
 ### /admin - redirects to Strapi dashboard
