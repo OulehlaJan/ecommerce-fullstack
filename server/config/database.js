@@ -2,20 +2,17 @@ const { parse } = require("pg-connection-string");
 
 module.exports = ({ env }) => {
   const { host, port, database, user, password } = parse(env("DATABASE_URL"));
-  const sslConfig = env("DATABASE_SSL")
-    ? JSON.parse(env("DATABASE_SSL"))
-    : false;
 
   return {
     connection: {
-      client: process.env.DATABASE_CLIENT,
+      client: "postgres",
       connection: {
         host,
         port,
         database,
         user,
         password,
-        ssl: sslConfig,
+        ssl: { rejectUnauthorized: false },
       },
       pool: {
         min: 0,
