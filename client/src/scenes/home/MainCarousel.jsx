@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Box, Typography, IconButton, useMediaQuery } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import { shades } from "../../theme";
@@ -23,26 +22,8 @@ const heroTextureImports = importAll(
 );
 
 const MainCarousel = () => {
-  const [initialTouch, setInitialTouch] = useState({ x: 0, y: 0 });
   const isNonMobile = useMediaQuery("min-width:600px");
   const theme = useTheme();
-
-  const handleSwipeStart = (event) => {
-    const touch = event.touches[0];
-    setInitialTouch({ x: touch.clientX, y: touch.clientY });
-  };
-
-  const handleSwipeMove = (event) => {
-    if (initialTouch.x === 0 && initialTouch.y === 0) return;
-
-    const touch = event.touches[0];
-    const deltaX = touch.clientX - initialTouch.x;
-    const deltaY = touch.clientY - initialTouch.y;
-
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      event.stopPropagation();
-    }
-  };
 
   const imgHeight = {
     width: "100%",
@@ -61,11 +42,8 @@ const MainCarousel = () => {
         showThumbs={false}
         showIndicators={false}
         showStatus={false}
-        swipeable={true}
-        emulateTouch={true}
-        onSwipeStart={handleSwipeStart}
-        onSwipeMove={handleSwipeMove}
-        // swipeScrollTolerance={200}
+        swipeScrollTolerance={150}
+        preventMovementUntilSwipeScrollTolerance={true}
         renderArrowPrev={(onClickHandler, hasPrev, label) => (
           <IconButton
             onClick={onClickHandler}
