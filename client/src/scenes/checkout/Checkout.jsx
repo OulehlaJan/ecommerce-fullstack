@@ -9,7 +9,9 @@ import * as yup from "yup";
 import Shipping from "./Shipping";
 import Payment from "./Payment";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(
+  "pk_test_51PgmZuEwvdDXLPKC3MUhXApCWDZFDjIhZtc8vwmBxnFDZMch5T8USJ23bYune9db72LoAs117HbYO0VSr3p5XmsH009sAhG6HE"
+);
 
 const Checkout = () => {
   const [activeStep, setActiveStep] = useState(0);
