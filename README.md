@@ -10,9 +10,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/40c70173-088f-4486-af47-f2d5fb0a00f0/deploy-status)](https://app.netlify.com/sites/stylish-one/deploys) <br />
 
 <!-- Demo Link -->
-<p align="center">
+<h3 align="center">
   <a href="https://stylish-one.netlify.app">Ecommerce - Stylish One</a> :point_left: <br />
-</p>
+</h3>
 
 <!-- GIF -->
 <p align="center">
@@ -24,17 +24,37 @@
 /admin
 ```
 
-# <img src="./assets/tech-stack-icon.png" width="35"> Tech Stack 
+# :books: Tech Stack 
 
 ## Client
 
 <img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Redux.svg" width="68">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/client">More info</a>
 
-## Server
+### Features
+
++ **Local Storage for Checkout**: Stores checkout data in local storage and clears it once the order is placed.
++ **Lazy Loading on Products**
++ **Fully responsive**
+
+## Server - Heroku
 
 <img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL-Dark.svg" width="68">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
+
+### Media Management
+
++ **Cloudinary**
+
+### Security Settings
+
++ **Content Security Policy**
++ **HTTP Strict Transport Security**
++ **XSS Protection**
++ **Frameguard**
++ **NoSniff**
++ **Referrer Policy**
++ **Cross-Origin Resource Sharing**
 
 # &#129513; Dependencies
 
