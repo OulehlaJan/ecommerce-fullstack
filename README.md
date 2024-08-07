@@ -11,7 +11,7 @@
 
 <!-- Demo Link -->
 <p align="center">
-  <a href="https://stylish-one.netlify.app" target="_blank>Ecommerce - Stylish One</a>:point_left: <br />
+  <a href="https://stylish-one.netlify.app" target="_blank" rel="noopener noreferrer">Ecommerce - Stylish One</a> :point_left: <br />
 </p>
 
 <!-- GIF -->
