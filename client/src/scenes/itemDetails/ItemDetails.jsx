@@ -304,16 +304,11 @@ const ItemDetails = () => {
           variant="scrollable"
           scrollButtons="auto"
           allowScrollButtonsMobile
-          aria-label="scrollable auto tabs"
           sx={{
-            "& .MuiTabs-scrollButtons": {
-              transition: "opacity 0.3s ease, width 0.3s ease",
-              "&.Mui-disabled": {
-                width: 0,
-                opacity: 0,
-              },
+            "& .MuiTabs-scrollButtons.Mui-disabled": {
+              opacity: 0.3
             },
-          }}
+          }} 
         >
           <Tab label="DESCRIPTION" value="description" />
           <Tab label="SIZE CHART" value="size chart" />
