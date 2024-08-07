@@ -27,9 +27,9 @@ const MainCarousel = () => {
   const isNonMobile = useMediaQuery("min-width:600px");
   const theme = useTheme();
 
-  const handleSwipeStatrt = (event) => {
+  const handleSwipeStart = (event) => {
     const touch = event.touches[0];
-    setInitialTouch({ x: touch.clientX, y: touchClientY });
+    setInitialTouch({ x: touch.clientX, y: touch.clientY });
   };
 
   const handleSwipeMove = (event) => {
@@ -63,8 +63,8 @@ const MainCarousel = () => {
         showStatus={false}
         swipeable={true}
         emulateTouch={true}
-        onSwipeStart={handleSwipeStatrt}
-        onSwipeEnd={handleSwipeMove}
+        onSwipeStart={handleSwipeStart}
+        onSwipeMove={handleSwipeMove}
         // swipeScrollTolerance={200}
         renderArrowPrev={(onClickHandler, hasPrev, label) => (
           <IconButton
