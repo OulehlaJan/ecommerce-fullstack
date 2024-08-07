@@ -117,10 +117,10 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
                 zIndex: "9",
                 maxHeight: "300px",
                 overflowY: "auto",
-                pt: "18px",
+                // mt: "18px",
                 width: "100%",
                 backgroundColor: "rgba(255, 255, 255, 1)",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                boxShadow: "0px 3px 2px rgba(0, 0, 0, 0.1)",
               }}
             >
               {({ TransitionProps }) => (
