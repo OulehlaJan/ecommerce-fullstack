@@ -7,7 +7,7 @@
   NODE_ENV = "production"
 
 [context.deploy-preview]
-  NODE_ENV = "preview"
+  NODE_ENV = "production"
   command = "cd client && npm install && npm run build"
   publish = "client/build"
   
