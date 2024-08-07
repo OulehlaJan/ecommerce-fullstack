@@ -10,7 +10,7 @@ import {
   Popper,
   Paper,
   MenuItem,
-  Grow,
+  Slide,
   Avatar,
 } from "@mui/material";
 import { Close as CloseIcon } from "@mui/icons-material";
@@ -64,10 +64,10 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
             top: "60px",
             left: "0",
             width: "100%",
-            backgroundColor: "rgba(255, 255, 255, 100)",
+            backgroundColor: "rgba(255, 255, 255, 1)",
             zIndex: "10",
             p: "20px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
           }}
         >
           <Box
@@ -80,10 +80,10 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search products..."
-              InputProps={{ style: { fontSize: 16 } }}
+              // InputProps={{ style: { fontSize: "16px" } }}
               sx={{
                 "& input": {
-                  fontSize: "16px",
+                  fontSize: { md: "14px", sm: "16px" },
                 },
               }}
             />
@@ -114,21 +114,25 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
                 },
               ]}
               sx={{
-                zIndex: "9",
+                zIndex: "1",
                 maxHeight: "300px",
                 overflowY: "auto",
                 pt: "18px",
                 width: "100%",
-                backgroundColor: "rgba(255, 255, 255, 0.9)",
+                backgroundColor: "rgba(255, 255, 255, 1)",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
               }}
             >
               {({ TransitionProps }) => (
-                <Grow {...TransitionProps}>
+                <Slide {...TransitionProps} direction="down" style={{}}>
                   <Paper>
                     {searchResults.length > 0 ? (
                       searchResults.map((item) => (
                         <MenuItem
-                          sx={{ p: "13px 0 13px 11px" }}
+                          sx={{
+                            p: "13px 0 13px 11px",
+                            backgroundColor: "rgba(255, 255, 255, 1)",
+                          }}
                           key={item.id}
                           onClick={() => handleItemClick(item.id)}
                         >
@@ -146,7 +150,7 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
                       </MenuItem>
                     )}
                   </Paper>
-                </Grow>
+                </Slide>
               )}
             </Popper>
           )}

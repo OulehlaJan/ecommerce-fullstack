@@ -17,7 +17,7 @@ const AboutUsSection = () => {
           borderBottomRightRadius: "50px",
           "&:hover": {
             transform: "scale(1.03)",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.4)",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
             borderTopRightRadius: { md: "50px", xs: "none" },
             borderBottomRightRadius: "50px",
           },
