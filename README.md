@@ -11,7 +11,7 @@
 
 <!-- Demo Link -->
 <p align="center">
-  <a href="https://stylish-one.netlify.app">Ecommerce - Stylish One</a>:point_left: <br />
+  <a href="https://stylish-one.netlify.app">Ecommerce - Stylish One</a> :point_left: <br />
 </p>
 
 <!-- GIF -->
@@ -19,7 +19,10 @@
   <img src="assets/StylishOne.gif" />
 </p>
 
+
 ### /admin - redirects to Strapi dashboard
+
+## Tech Stack
 
 ## &#129513; Dependencies
 
