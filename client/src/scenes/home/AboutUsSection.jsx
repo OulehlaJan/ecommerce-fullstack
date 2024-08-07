@@ -87,38 +87,37 @@ const AboutUsSection = () => {
               Subscribe to our newsletter to receive news and updates on sales.
             </Typography>
             {/* ANCHOR ON SUBSCRIBE */}
-            <Box sx={{
-              textDecoration: "none"
-            }}>
-              <AnchorLink href="#subscribe-section">
-                <Button
-                  variant="contained"
-                  sx={{
-                    m: {
-                      md: "20px 0 0 0",
-                      xs: "20px 0 10px 0",
+            <AnchorLink
+              href="#subscribe-section"
+              style={{ textDecoration: "none" }}
+            >
+              <Button
+                variant="contained"
+                sx={{
+                  m: {
+                    md: "20px 0 0 0",
+                    xs: "20px 0 10px 0",
+                  },
+                  p: "10px",
+                  fontSize: { md: "15px", sm: "14px", xs: "11px" },
+                  borderRadius: "3px",
+                  color: "white",
+                  backgroundColor: "#222222",
+                  "@media (min-width: 960px)": {
+                    "&:hover": {
+                      backgroundColor: "rgba(34, 34, 34, 0.05)",
+                      color: "black",
                     },
-                    p: "10px",
-                    fontSize: { md: "15px", sm: "14px", xs: "11px" },
-                    borderRadius: "3px",
-                    color: "white",
-                    backgroundColor: "#222222",
-                    "@media (min-width: 960px)": {
-                      "&:hover": {
-                        backgroundColor: "rgba(34, 34, 34, 0.05)",
-                        color: "black",
-                      },
-                      "&:active": {
-                        backgroundColor: "#222222",
-                        color: "white",
-                      },
+                    "&:active": {
+                      backgroundColor: "#222222",
+                      color: "white",
                     },
-                  }}
-                >
-                  Newsletter
-                </Button>
-              </AnchorLink>
-            </Box>
+                  },
+                }}
+              >
+                Newsletter
+              </Button>
+            </AnchorLink>
           </Box>
         </Box>
       </Box>
