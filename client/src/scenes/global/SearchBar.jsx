@@ -80,6 +80,12 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
               value={searchQuery}
               onChange={handleSearchChange}
               placeholder="Search products..."
+              InputProps={{ style: { fontSize: 16 } }}
+              sx={{
+                "& input": {
+                  fontSize: "16px",
+                },
+              }}
             />
             <Box pl="15px">
               <IconButton onClick={handleToggleSearch}>
