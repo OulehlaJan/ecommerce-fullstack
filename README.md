@@ -33,9 +33,9 @@
 
 ### Features
 
-+ Lazy Loading on Products
-+ Local Storage for Checkout
-+ Fully responsive
++ **Local Storage for Checkout**: Stores checkout data in local storage and clears it once the order is placed.
++ **Lazy Loading on Products**
++ **Fully responsive**
 
 ## Server - Heroku
 
