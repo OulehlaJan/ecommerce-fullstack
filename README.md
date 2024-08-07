@@ -24,17 +24,27 @@
 /admin
 ```
 
-# <img src="./assets/tech-stack-icon.png" width="35"> Tech Stack 
+# :books: Tech Stack 
 
 ## Client
 
 <img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Redux.svg" width="68">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/client">More info</a>
 
-## Server
+## Server - Heroku
 
 <img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL-Dark.svg" width="68">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
+
+### Security Settings
+
++ Content Security Policy
++ HTTP Strict Transport Security
++ XSS Protection
++ Frameguard
++ NoSniff
++ Referrer Policy
++ Cross-Origin Resource Sharing
 
 # &#129513; Dependencies
 
