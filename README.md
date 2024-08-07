@@ -19,7 +19,10 @@
   <img src="assets/StylishOne.gif" />
 </p>
 
+
 ### /admin - redirects to Strapi dashboard
+
+## Tech Stack
 
 ## &#129513; Dependencies
 
