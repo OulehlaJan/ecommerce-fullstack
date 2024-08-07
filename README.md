@@ -66,7 +66,7 @@
 
 ### Database
 
-+ **PostgreSQL**: The backend database for Strapi
++ **PostgreSQL**: Database for storing data.
 
 ### Security Settings
 
