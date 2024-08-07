@@ -58,10 +58,15 @@
 ### Content Management
 
 + **STRAPI headless CMS** for managing content and data models.
++ **Order Management** Strapi handles order data, including processing and storing order details.
 
 ### Media Management
 
 + **Cloudinary**
+
+### Database
+
++ **PostgreSQL**: The backend database for Strapi
 
 ### Security Settings
 
