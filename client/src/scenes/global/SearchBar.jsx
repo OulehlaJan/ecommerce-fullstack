@@ -94,6 +94,19 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
               anchorEl={anchorEl}
               placement="bottom-start"
               transition
+              disablePortal
+              modifiers={[
+                {
+                  name: "flip",
+                  enabled: false,
+                },
+                {
+                  name: "preventOverflow",
+                  options: {
+                    boundary: "viewport",
+                  },
+                },
+              ]}
               sx={{
                 zIndex: "9",
                 maxHeight: "300px",
