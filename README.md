@@ -28,7 +28,7 @@
 
 ## Client
 
-<img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Redux.svg" width="68">
+<img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Redux.svg" width="68"> 
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/client">More info</a>
 
 ### Features
@@ -43,7 +43,7 @@
 
 ## Server - Heroku
 
-<img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL-Dark.svg" width="68">
+<img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Cloudinary.svg" width="88">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
 
 ### Payment Gateway Integration
