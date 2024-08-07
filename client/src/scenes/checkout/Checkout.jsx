@@ -10,7 +10,7 @@ import Shipping from "./Shipping";
 import Payment from "./Payment";
 
 const stripePromise = loadStripe(
-  "pk_test_51PgmZuEwvdDXLPKC3MUhXApCWDZFDjIhZtc8vwmBxnFDZMch5T8USJ23bYune9db72LoAs117HbYO0VSr3p5XmsH009sAhG6HE"
+  loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 );
 
 const Checkout = () => {
