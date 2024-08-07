@@ -91,7 +91,11 @@ const ShoppingList = () => {
           variant="scrollable"
           scrollButtons="auto"
           allowScrollButtonsMobile
-          aria-label="scrollable auto tabs"
+          sx={{
+            "& .MuiTabs-scrollButtons.Mui-disabled": {
+              opacity: 0.3
+            },
+          }}       
         >
           <Tab label="ALL" value="all" />
           <Tab label="NEW ARRIVALS" value="newArrivals" />
