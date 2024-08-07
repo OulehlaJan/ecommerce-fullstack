@@ -67,7 +67,7 @@ const SearchBar = ({ searchOpen, handleToggleSearch }) => {
             backgroundColor: "rgba(255, 255, 255, 1)",
             zIndex: "10",
             p: "20px",
-            boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.1)",
+            boxShadow: "0px 3px 2px rgba(0, 0, 0, 0.1)",
           }}
         >
           <Box
