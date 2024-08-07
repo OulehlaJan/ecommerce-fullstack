@@ -42,7 +42,7 @@ const MainCarousel = () => {
         showThumbs={false}
         showIndicators={false}
         showStatus={false}
-        swipeScrollTolerance={150}
+        swipeScrollTolerance={50}
         preventMovementUntilSwipeScrollTolerance={true}
         renderArrowPrev={(onClickHandler, hasPrev, label) => (
           <IconButton
