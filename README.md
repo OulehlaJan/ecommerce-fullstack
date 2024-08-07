@@ -66,7 +66,7 @@
 
 ### Database
 
-+ **PostgreSQL**: Database for storing data.
++ **PostgreSQL**: For storing data.
 
 ### Security Settings
 
