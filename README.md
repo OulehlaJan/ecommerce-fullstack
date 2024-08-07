@@ -24,7 +24,7 @@
 /admin
 ```
 
-# <img src="./assets/assets/tech-stack-icon.png" width="68"> Tech Stack 
+# <img src="./assets/tech-stack-icon.png" width="35"> Tech Stack 
 
 ## Client
 
