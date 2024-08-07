@@ -53,7 +53,7 @@
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
 
 ### Payment Gateway Integration
-+ **Uses Stripe API for secure payment processing and order management on the server-side.**
++ **Uses Stripe API**
 
 ### Content Management
 
