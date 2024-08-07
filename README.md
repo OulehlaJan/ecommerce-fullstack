@@ -24,7 +24,7 @@
 
 ## Tech Stack
 
-<img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68">
+<img src="./assets/JavaScript.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/MaterialUI-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/React-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Redux.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL.svg" width="68">
 
 ## &#129513; Dependencies
 
