@@ -1,4 +1,12 @@
-import { Box, Typography, TextField } from "@mui/material";
+import { Box, Typography, TextField, styled } from "@mui/material";
+
+const NoZoomInTextField = styled(TextField)`
+  & input {
+    font-size: 16px;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+`;
 
 const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
   return (
@@ -8,7 +16,7 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
         <Typography sx={{ mb: "15px" }} fontSize="18px">
           Contact Info
         </Typography>
-        <TextField
+        <NoZoomInTextField
           fullWidth
           type="text"
           label="Email"
@@ -20,7 +28,7 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
           helperText={touched.email && errors.email}
           sx={{ gridColumn: "span 4", marginBottom: "15px" }}
         />
-        <TextField
+        <NoZoomInTextField
           fullWidth
           type="text"
           label="Phone Number"
