@@ -1,10 +1,11 @@
-import { Box, useMediaQuery, TextField } from "@mui/material";
+import { Box, useMediaQuery, TextField, styled } from "@mui/material";
 import { getIn } from "formik";
-import { styled } from "@mui/material";
 
 const NoZoomInTextField = styled(TextField)`
   & input {
-    font-size: 16px;
+    font-size: 16px; /* No zoom on smaller devices */
+    padding: 25px; /* vertical alignment */
+    box-sizing: border-box;
   }
 `;
 
