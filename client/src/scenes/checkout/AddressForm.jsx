@@ -42,7 +42,13 @@ const AddressForm = ({
         name={formattedName("firstName")}
         error={formattedError("firstName")}
         helperText={formattedHelper("firstName")}
-        sx={{ gridColumn: "span 2" }}
+        sx={{
+          gridColumn: "span 2",
+          "& input": {
+            fontSize: { md: "14px", sm: "16px" },
+          },
+        }}
+        InputProps={{ style: { fontSize: "16px" } }}
       />
       <TextField
         fullWidth
@@ -54,7 +60,13 @@ const AddressForm = ({
         name={formattedName("lastName")}
         error={formattedError("lastName")}
         helperText={formattedHelper("lastName")}
-        sx={{ gridColumn: "span 2" }}
+        sx={{
+          gridColumn: "span 2",
+          "& input": {
+            fontSize: { md: "14px", sm: "16px" },
+          },
+        }}
+        InputProps={{ style: { fontSize: "16px" } }}
       />
       <TextField
         fullWidth
@@ -66,7 +78,13 @@ const AddressForm = ({
         name={formattedName("country")}
         error={formattedError("country")}
         helperText={formattedHelper("country")}
-        sx={{ gridColumn: "span 4" }}
+        sx={{
+          gridColumn: "span 2",
+          "& input": {
+            fontSize: { md: "14px", sm: "16px" },
+          },
+        }}
+        InputProps={{ style: { fontSize: "16px" } }}
       />
       <TextField
         fullWidth
@@ -78,7 +96,13 @@ const AddressForm = ({
         name={formattedName("street1")}
         error={formattedError("street1")}
         helperText={formattedHelper("street1")}
-        sx={{ gridColumn: "span 2" }}
+        sx={{
+          gridColumn: "span 2",
+          "& input": {
+            fontSize: { md: "14px", sm: "16px" },
+          },
+        }}
+        InputProps={{ style: { fontSize: "16px" } }}
       />
       <TextField
         fullWidth
@@ -90,7 +114,13 @@ const AddressForm = ({
         name={formattedName("street2")}
         error={formattedError("street2")}
         helperText={formattedHelper("street2")}
-        sx={{ gridColumn: "span 2" }}
+        sx={{
+          gridColumn: "span 2",
+          "& input": {
+            fontSize: { md: "14px", sm: "16px" },
+          },
+        }}
+        InputProps={{ style: { fontSize: "16px" } }}
       />
       <TextField
         fullWidth
@@ -102,7 +132,13 @@ const AddressForm = ({
         name={formattedName("city")}
         error={formattedError("city")}
         helperText={formattedHelper("city")}
-        sx={{ gridColumn: "span 2" }}
+        sx={{
+          gridColumn: "span 2",
+          "& input": {
+            fontSize: { md: "14px", sm: "16px" },
+          },
+        }}
+        InputProps={{ style: { fontSize: "16px" } }}
       />
       <TextField
         fullWidth
@@ -114,7 +150,13 @@ const AddressForm = ({
         name={formattedName("state")}
         error={formattedError("state")}
         helperText={formattedHelper("state")}
-        sx={{ gridColumn: "span 1fr" }}
+        sx={{
+          gridColumn: "span 2",
+          "& input": {
+            fontSize: { md: "14px", sm: "16px" },
+          },
+        }}
+        InputProps={{ style: { fontSize: "16px" } }}
       />
       <TextField
         fullWidth
@@ -126,7 +168,13 @@ const AddressForm = ({
         name={formattedName("zipCode")}
         error={formattedError("zipCode")}
         helperText={formattedHelper("zipCode")}
-        sx={{ gridColumn: "1fr" }}
+        sx={{
+          gridColumn: "span 2",
+          "& input": {
+            fontSize: { md: "14px", sm: "16px" },
+          },
+        }}
+        InputProps={{ style: { fontSize: "16px" } }}
       />
     </Box>
   );
