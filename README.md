@@ -62,7 +62,7 @@
 
 ### Media Management
 
-+ **Cloudinary**
++ **Cloudinary**> For storing media
 
 ### Database
 
