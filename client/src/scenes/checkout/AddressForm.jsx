@@ -1,5 +1,12 @@
 import { Box, useMediaQuery, TextField } from "@mui/material";
 import { getIn } from "formik";
+import { styled } from "@mui/material";
+
+const NoZoomInTextField = styled(TextField)`
+  & input {
+    font-size: 16px;
+  }
+`;
 
 const AddressForm = ({
   type,
@@ -32,7 +39,7 @@ const AddressForm = ({
         "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
       }}
     >
-      <TextField
+      <NoZoomInTextField
         fullWidth
         type="text"
         label="First Name"
@@ -43,9 +50,8 @@ const AddressForm = ({
         error={formattedError("firstName")}
         helperText={formattedHelper("firstName")}
         sx={{ gridColumn: "span 2" }}
-        inputProps={{ inputMode: 'text' }}
       />
-      <TextField
+      <NoZoomInTextField
         fullWidth
         type="text"
         label="Last Name"
@@ -56,9 +62,8 @@ const AddressForm = ({
         error={formattedError("lastName")}
         helperText={formattedHelper("lastName")}
         sx={{ gridColumn: "span 2" }}
-        inputProps={{ inputMode: 'text' }}
       />
-      <TextField
+      <NoZoomInTextField
         fullWidth
         type="text"
         label="Country"
@@ -69,9 +74,8 @@ const AddressForm = ({
         error={formattedError("country")}
         helperText={formattedHelper("country")}
         sx={{ gridColumn: "span 4" }}
-        inputProps={{ inputMode: 'text' }}
       />
-      <TextField
+      <NoZoomInTextField
         fullWidth
         type="text"
         label="Street Address"
@@ -82,9 +86,8 @@ const AddressForm = ({
         error={formattedError("street1")}
         helperText={formattedHelper("street1")}
         sx={{ gridColumn: "span 2" }}
-        inputProps={{ inputMode: 'text' }}
       />
-      <TextField
+      <NoZoomInTextField
         fullWidth
         type="text"
         label="Street Address 2 (optional)"
@@ -95,9 +98,8 @@ const AddressForm = ({
         error={formattedError("street2")}
         helperText={formattedHelper("street2")}
         sx={{ gridColumn: "span 2" }}
-        inputProps={{ inputMode: 'text' }}
       />
-      <TextField
+      <NoZoomInTextField
         fullWidth
         type="text"
         label="City"
@@ -108,9 +110,8 @@ const AddressForm = ({
         error={formattedError("city")}
         helperText={formattedHelper("city")}
         sx={{ gridColumn: "span 2" }}
-        inputProps={{ inputMode: 'text' }}
       />
-      <TextField
+      <NoZoomInTextField
         fullWidth
         type="text"
         label="State"
@@ -121,9 +122,8 @@ const AddressForm = ({
         error={formattedError("state")}
         helperText={formattedHelper("state")}
         sx={{ gridColumn: "span 1fr" }}
-        inputProps={{ inputMode: 'text' }}
       />
-      <TextField
+      <NoZoomInTextField
         fullWidth
         type="text"
         label="Zip Code"
@@ -134,7 +134,6 @@ const AddressForm = ({
         error={formattedError("zipCode")}
         helperText={formattedHelper("zipCode")}
         sx={{ gridColumn: "1fr" }}
-        inputProps={{ inputMode: 'text' }}
       />
     </Box>
   );
