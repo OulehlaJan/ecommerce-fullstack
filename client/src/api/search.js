@@ -6,9 +6,7 @@ import { API_URL } from "./config";
 export const searchItems = async (query) => {
   try {
     const response = await axios.get(
-      `${API_URL}/items?filters[$or][0][clothingTypeCategory][$containsi]=${encodeURIComponent(
-        query
-      )}&filters[$or][1][name][$containsi]=${encodeURIComponent(
+      `${API_URL}/items?filters[name][$containsi]=${encodeURIComponent(
         query
       )}&populate=image`
     );
