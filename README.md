@@ -53,7 +53,7 @@
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
 
 ### Payment Gateway Integration
-+ **Uses Stripe API**
++ **Handles payment processing using Stripe API on the server-side.**
 
 ### Content Management
 
@@ -62,7 +62,7 @@
 
 ### Media Management
 
-+ **Cloudinary**
++ **Cloudinary** For storing media
 
 ### Database
 
