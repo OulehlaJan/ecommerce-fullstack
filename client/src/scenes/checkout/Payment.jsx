@@ -2,8 +2,8 @@ import { Box, Typography, TextField, styled } from "@mui/material";
 
 const NoZoomInTextField = styled(TextField)`
   & input {
-    font-size: 16px;
-    padding: 25px;
+    font-size: 16px; /* No zoom on smaller devices */
+    padding: 25px; /* vertical alignment */
     box-sizing: border-box;
   }
 `;
