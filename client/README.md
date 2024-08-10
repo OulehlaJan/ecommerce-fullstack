@@ -1,3 +1,32 @@
+# &#129513; Dependencies
+
+### Client
+
++ axios 1.7.2
++ dotenv 16.4.5
++ formik 2.4.6
++ yup 1.4.0
++ lodash.throttle 4.1.1
++ react-anchor-link-smooth-scroll 1.0.12
++ react-responsive-carousel 3.2.23
++ react-lazyload 3.2.1
++ react-router-dom 5.3.4
++ react-redux 9.1.2
++ react 18.3.1
++ react-dom 18.3.1
++ react-scripts 5.0.1
++ web-vitals 2.1.4
++ @reduxjs/toolkit 2.2.6
++ @stripe/stripe-js 4.1.0
++ @mui/material 5.15.21
++ @mui/icons-material 5.15.21
++ @emotion/styled 11.11.5
++ @emotion/react 11.11.4
++ @testing-library/react 13.4.0
++ @testing-library/user-event 13.5.0
++ @testing-library/jest-dom 5.17.0
++ @babel/plugin-proposal-private-property-in-object 7.21.11****
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
