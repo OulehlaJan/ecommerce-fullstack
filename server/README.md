@@ -1,7 +1,5 @@
 # &#129513; Dependencies
 
-### Server
-
 + stripe 16.6.0
 + @strapi/strapi 4.7.0
 + @strapi/plugin-users-permissions 4.7.0
