@@ -1,7 +1,5 @@
 # &#129513; Dependencies
 
-### Client
-
 + axios 1.7.2
 + dotenv 16.4.5
 + formik 2.4.6
