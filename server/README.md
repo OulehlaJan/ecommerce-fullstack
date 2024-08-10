@@ -1,15 +1,20 @@
-<!-- Created by, animated text -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Noto+Sans&weight=600&size=32&duration=3300&pause=4800&color=79C0FF&center=true&vCenter=true&random=false&width=435&lines=%F0%9F%91%8B%2C+Created+by+%40OulehlaJan" />
-</p>
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=noto&weight=600&size=22&duration=4000&pause=4350&color=FFA657&center=true&vCenter=true&random=false&width=910&lines=a+self-taught+passionate+Web+developer+from+Czechia" />
-</p>
+# &#129513; Dependencies
 
-<!-- Gif -->
-<p align="center">
-  <img width="1200" src="assets/ThisWillBeReady.gif" />
-</p>
+### Server
+
++ stripe 16.6.0
++ @strapi/strapi 4.7.0
++ @strapi/plugin-users-permissions 4.7.0
++ @strapi/plugin-i18n 4.7.0
++ @strapi/provider-upload-cloudinary 4.25.6
++ @strapi/plugin-cloud 4.25.1
++ pg 8.12.0
++ pg-connection-string 2.6.4
++ react 18.3.1
++ react-dom 18.3.1
++ react-router-dom 5.3.4
++ styled-components 5.3.3
+
 
 # 🚀 Getting started with Strapi
 
