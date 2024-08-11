@@ -53,12 +53,13 @@
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
 
 ### Payment Gateway Integration
-+ **Handles payment processing using Stripe API on the server-side.**
+
++ **Handles payment processing on the server-side using Stripe API**: The server creates a Stripe session for payment, processes the transaction, and stores the order data, including item details and payment session ID, in Strapi (with data being stored in a PostgreSQL database).
+
 
 ### Content Management
 
 + **STRAPI headless CMS** for managing content and data models.
-+ **Order Management** Strapi provides the API and backend logic to handle order data.
 
 ### Media Management
 
