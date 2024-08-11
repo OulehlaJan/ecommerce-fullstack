@@ -60,6 +60,8 @@ const Checkout = () => {
       setActiveStep(activeStep + 1);
     }
 
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
     actions.setTouched({});
   };
 
