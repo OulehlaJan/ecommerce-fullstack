@@ -19,6 +19,7 @@ const Footer = () => {
         <Box>
           <Typography
             variant="h4"
+            fontSize="17px"
             fontWeight="bold"
             mt="10px"
             mb="20px"

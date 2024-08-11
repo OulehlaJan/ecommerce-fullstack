@@ -4,7 +4,14 @@ import { Formik } from "formik";
 import { shades } from "../../theme";
 import { loadStripe } from "@stripe/stripe-js";
 import { makePayment } from "../../api/payment";
-import { Box, Button, Stepper, Step, StepLabel } from "@mui/material";
+import {
+  Box,
+  Button,
+  Stepper,
+  Step,
+  StepLabel,
+  CircularProgress,
+} from "@mui/material";
 import * as yup from "yup";
 import Shipping from "./Shipping";
 import Payment from "./Payment";
@@ -15,6 +22,7 @@ const stripePromise = loadStripe(
 
 const Checkout = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const cart = useSelector((state) => state.cart.cart);
   const isFirstStep = activeStep === 0;
   const isSecondStep = activeStep === 1;
@@ -38,18 +46,18 @@ const Checkout = () => {
   };
 
   const handleFormSubmit = async (values, actions) => {
-    setActiveStep(activeStep + 1);
-
     //Copies the billing address onto shipping address
     if (isFirstStep && values.shippingAddress.isSameAddress) {
       actions.setFieldValue("shippingAddress", {
         ...values.billingAddress,
         isSameAddress: true,
       });
-    }
-
-    if (isSecondStep) {
-      processPayment(values);
+      setActiveStep(activeStep + 1);
+    } else if (isSecondStep) {
+      setIsLoading(true); // Show loading icon after clicking on "Place Order"
+      await processPayment(values);
+    } else {
+      setActiveStep(activeStep + 1);
     }
 
     actions.setTouched({});
@@ -57,6 +65,22 @@ const Checkout = () => {
 
   return (
     <Box width="80%" m="100px auto">
+      {isLoading && (
+        <Box
+          position="fixed"
+          top="0"
+          left="0"
+          height="100%"
+          width="100%"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          zIndex="11"
+          bgcolor="rgba(255, 255, 255, 0.8)"
+        >
+          <CircularProgress size="60px" />
+        </Box>
+      )}
       <Stepper activeStep={activeStep} sx={{ m: "20px 0" }}>
         <Step>
           <StepLabel>Billing</StepLabel>
