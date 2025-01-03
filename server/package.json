@@ -8,7 +8,7 @@
     "name": "Jan Oulehla"
   },
   "scripts": {
-     "start": "strapi start",
+    "start": "strapi start",
     "build": "strapi build",
     "develop": "strapi develop"
   },
