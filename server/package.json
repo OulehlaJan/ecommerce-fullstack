@@ -13,12 +13,20 @@
     "develop": "strapi develop"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@strapi/plugin-cloud": "^4.25.1",
     "@strapi/plugin-i18n": "^4.7.0",
     "@strapi/plugin-users-permissions": "^4.7.0",
     "@strapi/provider-upload-cloudinary": "^4.25.6",
     "@strapi/strapi": "^4.7.0",
     "dependencies": "^0.0.1",
+=======
+    "@strapi/strapi": "^4.7.0",
+    "@strapi/plugin-users-permissions": "^4.7.0",
+    "@strapi/plugin-i18n": "^4.7.0",
+    "@strapi/provider-upload-cloudinary": "^4.25.6",
+    "@strapi/plugin-cloud": "^4.25.1",
+>>>>>>> origin/master
     "pg": "^8.12.0",
     "pg-connection-string": "^2.6.4",
     "react": "^18.3.1",
