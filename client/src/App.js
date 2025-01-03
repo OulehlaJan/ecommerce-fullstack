@@ -69,7 +69,7 @@ function App() {
               path="/admin"
               render={() =>
                 (window.location.href =
-                  "https://stylish-one-7f1f35e5b636.herokuapp.com/admin")
+                  "https://ecommerce-fullstack-jt5c.onrender.com/admin")
               }
             />
             <Route component={NotFound} />
