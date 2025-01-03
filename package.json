@@ -8,10 +8,8 @@
     "name": "Jan Oulehla"
   },
   "scripts": {
-    "build": "npm run build:server",
-    "start": "npm run start:server",
-    "start:server": "cd server && npm start",
-    "build:server": "cd server && npm install && npm run build"
+    "build": "cd server && npm install && npm run build",
+    "start": "cd server && npm start"
   },
   "engines": {
     "node": "18.20.4",
