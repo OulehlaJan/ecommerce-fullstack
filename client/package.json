@@ -25,10 +25,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
-<<<<<<< HEAD
     "dependencies": "^0.0.1",
-=======
->>>>>>> origin/master
     "dotenv": "^16.4.5",
     "formik": "^2.4.6",
     "lodash.throttle": "^4.1.1",
@@ -67,10 +64,6 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.24.7"
-<<<<<<< HEAD
   },
   "proxy": "http://localhost:1337"
-=======
-  }
->>>>>>> origin/master
 }
