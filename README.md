@@ -47,7 +47,7 @@
 + **Billing Information**
 + **Contact Info**
 
-## Server - Heroku
+## Server - Render
 
 <img src="./assets/Strapi-Monogram-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/PostgreSQL-Dark.svg" width="68"> &nbsp;&nbsp; <img src="./assets/Cloudinary.svg" width="90">
 ### <a href="https://github.com/OulehlaJan/ecommerce-fullstack/tree/master/server">More info</a>
