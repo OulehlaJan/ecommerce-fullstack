@@ -33,19 +33,19 @@
 
 ### Payment Gateway Integration
 
-+ **Uses Stripe.js and Stripe Elements for secure payment collection on the client-side.**
++ **Uses Stripe.js and Stripe elements for secure payment collection on the client-side.**
 
 ### Features
 
-+ **Local Storage for Checkout**: Stores checkout data in local storage and clears it once the order is placed.
-+ **Lazy loading on Products**
++ **Local storage for checkout**: Stores checkout data in local storage and clears it once the order is placed.
++ **Lazy loading on products**
 + **Fully responsive**
 
 ### Validated Checkout Inputs
 
-+ **Shipping Information**
-+ **Billing Information**
-+ **Contact Info**
++ **Shipping information**
++ **Billing information**
++ **Contact info**
 
 ## Server - Render
 
