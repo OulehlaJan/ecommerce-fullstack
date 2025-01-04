@@ -38,7 +38,7 @@
 ### Features
 
 + **Local Storage for Checkout**: Stores checkout data in local storage and clears it once the order is placed.
-+ **Lazy Loading on Products**
++ **Lazy loading on Products**
 + **Fully responsive**
 
 ### Validated Checkout Inputs
