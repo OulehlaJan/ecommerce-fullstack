@@ -9,7 +9,7 @@
 # :computer: Demo
 [![Netlify Status](https://api.netlify.com/api/v1/badges/40c70173-088f-4486-af47-f2d5fb0a00f0/deploy-status)](https://app.netlify.com/sites/stylish-one/deploys) <br />
 
-> **Alert:** Server spins down after inactivity – please allow a few seconds for it to wake up.
+> **Important:** Server spins down after inactivity – please allow a few seconds for it to wake up.
 
 <!-- Demo Link -->
 <h3 align="center">
